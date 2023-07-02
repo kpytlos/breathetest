@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/breathetest/static/css/main.6cea2a18.css",
+    "main.js": "/breathetest/static/js/main.803270c8.js",
+    "static/js/787.7c512b86.chunk.js": "/breathetest/static/js/787.7c512b86.chunk.js",
+    "index.html": "/breathetest/index.html",
+    "main.6cea2a18.css.map": "/breathetest/static/css/main.6cea2a18.css.map",
+    "main.803270c8.js.map": "/breathetest/static/js/main.803270c8.js.map",
+    "787.7c512b86.chunk.js.map": "/breathetest/static/js/787.7c512b86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cea2a18.css",
+    "static/js/main.803270c8.js"
+  ]
+}
