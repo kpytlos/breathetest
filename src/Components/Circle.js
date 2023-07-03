@@ -6,7 +6,7 @@ class Circle extends Component {
   state = {
     text: "Breathe In",
     duration: 60,
-    breaths: 10,
+    breaths: 7,
     resetAnimation: false,
   };
 

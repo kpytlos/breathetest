@@ -1,10 +1,10 @@
 .circle {
-  background-color: blue;
-  width: 100px;
-  height: 100px;
+  background-color: #82d182;
+  width: 18vh;
+  height: 18vh;
   border-radius: 50%;
   animation: circleAnimation infinite;
-  box-shadow: 0 0 20px blue;
+  box-shadow: 0 0 20px rgba(130, 209, 130, 0.5);
 }
 
 @keyframes circleAnimation {
@@ -12,7 +12,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(3.6);
+    transform: scale(3);
   }
   100% {
     transform: scale(1);
@@ -25,6 +25,7 @@
   transform: translate(-50%, -50%);
   font-size: 24px;
   text-align: center;
+  color: #375d3b;
 }
 
 .event-time {
