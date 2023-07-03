@@ -5,11 +5,10 @@ import AnimationOptions from "./AnimationOptions";
 class Circle extends Component {
   state = {
     text: "Breathe In",
-    duration: 8,
+    duration: 60,
+    breaths: 10,
     resetAnimation: false,
   };
-
-  timer = null;
 
   componentDidMount() {
     this.startTimer();
@@ -20,7 +19,8 @@ class Circle extends Component {
   }
 
   startTimer = () => {
-    this.timer = setInterval(this.changeText, (this.state.duration * 1000) / 2);
+    const breathDuration = this.state.duration / this.state.breaths;
+    this.timer = setInterval(this.changeText, (breathDuration / 2) * 1000);
   };
 
   clearTimer = () => {
@@ -34,9 +34,9 @@ class Circle extends Component {
     }));
   };
 
-  handleDurationChange = (duration) => {
+  handleBreathsNumber = (newBreaths) => {
     this.setState(
-      { duration, resetAnimation: true, text: "Breathe In" },
+      { breaths: newBreaths, resetAnimation: true, text: "Breathe In" },
       () => {
         this.clearTimer();
         this.startTimer();
@@ -48,19 +48,20 @@ class Circle extends Component {
   };
 
   render() {
-    const { duration, resetAnimation } = this.state;
+    const { duration, resetAnimation, breaths } = this.state;
     const circleClassName = `circle ${resetAnimation ? "reset-animation" : ""}`;
+    const breathDuration = duration / breaths;
 
     return (
       <div>
         <div
           className={circleClassName}
-          style={{ animationDuration: `${duration}s` }}
+          style={{ animationDuration: `${breathDuration}s` }}
         ></div>
         <div className="text">{this.state.text}</div>
-        <AnimationOptions onDurationChange={this.handleDurationChange} />
+        <AnimationOptions onBreathsNumber={this.handleBreathsNumber} />
         <div className="stats">
-          {this.state.duration}, {this.timer}
+          {duration}, {breaths}
         </div>
       </div>
     );
