@@ -36,12 +36,12 @@
   font-size: 16px;
 }
 
-.stats {
+/* .stats {
   position: fixed;
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 .reset-animation {
   animation: none; /* Reset the animation */

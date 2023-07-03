@@ -60,10 +60,10 @@ class Circle extends Component {
         ></div>
         <div className="text">{this.state.text}</div>
         <AnimationOptions onBreathsNumber={this.handleBreathsNumber} />
-        <div className="stats">
-          {duration}, {breaths}
-        </div>
+        {/* <div className="stats">
+          {duration}, {breaths} */}
       </div>
+      //   </div>
     );
   }
 }
