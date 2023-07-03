@@ -1,0 +1,6 @@
+.durationButtons {
+  position: fixed;
+  transform: translateX(-50%);
+  bottom: 60px;
+  left: 50%;
+}
