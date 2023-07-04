@@ -53,15 +53,20 @@ class Circle extends Component {
     const breathDuration = duration / breaths;
 
     return (
-      <div>
-        <div
-          className={circleClassName}
-          style={{ animationDuration: `${breathDuration}s` }}
-        ></div>
-        <div className="text">{this.state.text}</div>
-        <AnimationOptions onBreathsNumber={this.handleBreathsNumber} />
-        {/* <div className="stats">
+      <div className="circleContainer">
+        <h2>
+          Empowering to enhance your well-being through mindful breathing.
+        </h2>
+        <div className="circleBreaths">
+          <div
+            className={circleClassName}
+            style={{ animationDuration: `${breathDuration}s` }}
+          ></div>
+          <div className="text">{this.state.text}</div>
+          <AnimationOptions onBreathsNumber={this.handleBreathsNumber} />
+          {/* <div className="stats">
           {duration}, {breaths} */}
+        </div>
       </div>
       //   </div>
     );

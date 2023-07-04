@@ -1,3 +1,24 @@
+.circleContainer {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+h2 {
+  position: absolute;
+  top: 40px;
+  text-align: center;
+  color: #375d3b;
+  width: 100%;
+  font-size: clamp(15px, 5vw, 30px);
+}
+
+.circleBreaths {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .circle {
   background-color: #82d182;
   width: 18vh;
@@ -18,14 +39,19 @@
     transform: scale(1);
   }
 }
+
+.reset-animation {
+  animation: none; /* Reset the animation */
+}
+
 .text {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
   text-align: center;
   color: #375d3b;
+  font-size: clamp(20px, 5vw, 24px);
 }
 
 .event-time {
@@ -42,7 +68,3 @@
   left: 50%;
   transform: translateX(-50%);
 } */
-
-.reset-animation {
-  animation: none; /* Reset the animation */
-}
