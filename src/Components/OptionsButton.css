@@ -1,0 +1,54 @@
+.toggleButtonOptions {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.buttonsContainer {
+  background-color: #f0fff0;
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  width: 40vw;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.buttonText {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #375d3b;
+}
+
+/* .durationButtons {
+  
+} */
+
+.durationButtons button {
+  width: 40vw;
+  height: 5vh;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8ffd8;
+  color: #375d3b;
+  border: none;
+  font-size: clamp(14px, 3vw, 16px);
+}
+
+/* Media Query for smaller screens  */
+@media (max-width: 768px) {
+  .durationButtons button {
+    width: 70vw;
+  }
+  .buttonsContainer {
+    width: 70vw;
+  }
+}

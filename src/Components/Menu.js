@@ -12,7 +12,7 @@ const Menu = ({ onMenuOptionSelect }) => {
         Free Breathing
       </button>
       <button onClick={() => handleOptionSelect("menu")}>
-        Customize session
+        Customize session (comming soon)
       </button>
     </div>
   );

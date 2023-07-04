@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./Circle.css";
-import AnimationOptions from "./AnimationOptions";
+import OptionsButton from "./OptionsButton";
+import BackButton from "./BackButton";
+import "./OptionsButton.css";
+import "./BackButton.css";
 
 class Circle extends Component {
   state = {
@@ -47,6 +50,10 @@ class Circle extends Component {
     );
   };
 
+  handleGoBack = () => {
+    this.props.onMenuOptionSelect("menu");
+  };
+
   render() {
     const { duration, resetAnimation, breaths } = this.state;
     const circleClassName = `circle ${resetAnimation ? "reset-animation" : ""}`;
@@ -54,21 +61,18 @@ class Circle extends Component {
 
     return (
       <div className="circleContainer">
-        <h2>
-          Empowering to enhance your well-being through mindful breathing.
-        </h2>
         <div className="circleBreaths">
           <div
             className={circleClassName}
             style={{ animationDuration: `${breathDuration}s` }}
           ></div>
           <div className="text">{this.state.text}</div>
-          <AnimationOptions onBreathsNumber={this.handleBreathsNumber} />
+          <OptionsButton onBreathsNumber={this.handleBreathsNumber} />
           {/* <div className="stats">
           {duration}, {breaths} */}
         </div>
+        <BackButton onGoBack={this.handleGoBack} />
       </div>
-      //   </div>
     );
   }
 }

@@ -20,16 +20,20 @@ class App extends Component {
   render() {
     const { currentScreen } = this.state;
     return (
-      <div className="App App-header">
-        {currentScreen === "menu" ? (
-          <Menu onMenuOptionSelect={this.handleMenuOptionSelect} />
-        ) : // (<Menu onMenuOptionSelect={this.handleMenuOptionSelect} )/>
-        currentScreen === "circle" ? (
-          <Circle />
-        ) : (
-          // Render the customize menu screen component here
-          <div>Customize Menu</div>
-        )}
+      <div className="appContainer">
+        <h2 className="mainTitle">
+          Enhancing your well-being through mindful breathing.
+        </h2>
+        <div className="App App-header">
+          {currentScreen === "menu" ? (
+            <Menu onMenuOptionSelect={this.handleMenuOptionSelect} />
+          ) : currentScreen === "circle" ? (
+            <Circle onMenuOptionSelect={this.handleMenuOptionSelect} />
+          ) : (
+            // Render the customize menu screen component here
+            <div>Customize Menu</div>
+          )}
+        </div>
       </div>
     );
   }

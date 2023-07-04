@@ -1,0 +1,13 @@
+.uniButton {
+  cursor: pointer;
+  width: 80px;
+  height: 60px;
+  background-color: #375d3b;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
+
+.uniButton:hover {
+  background-color: #559d5f;
+}
