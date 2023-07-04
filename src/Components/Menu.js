@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 import "./Menu.css";
 
 const Menu = ({ onMenuOptionSelect }) => {
@@ -8,12 +9,12 @@ const Menu = ({ onMenuOptionSelect }) => {
   return (
     <div className="menuContainer">
       <h2>Menu</h2>
-      <button onClick={() => handleOptionSelect("circle")}>
+      <Button onClick={() => handleOptionSelect("circle")}>
         Free Breathing
-      </button>
-      <button onClick={() => handleOptionSelect("menu")}>
+      </Button>
+      <Button onClick={() => handleOptionSelect("menu")}>
         Customize session (comming soon)
-      </button>
+      </Button>
     </div>
   );
 };

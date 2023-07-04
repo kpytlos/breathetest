@@ -6,6 +6,7 @@
   border-radius: 5px;
   color: #fff;
   border: none;
+  font-size: clamp(18px, 2vw, 18px);
 }
 
 .uniButton:hover {

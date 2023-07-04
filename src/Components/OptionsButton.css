@@ -4,6 +4,9 @@
   right: 20px;
 }
 
+.toggleButtonOptions button {
+  font-size: 30px;
+}
 .buttonsContainer {
   background-color: #f0fff0;
   position: fixed;
@@ -40,7 +43,6 @@
   background-color: #d8ffd8;
   color: #375d3b;
   border: none;
-  font-size: clamp(14px, 3vw, 16px);
 }
 
 /* Media Query for smaller screens  */
