@@ -5,7 +5,7 @@ import Menu from "./Components/Menu";
 
 class App extends Component {
   state = {
-    currentScreen: "menu", // Initial screen is set to "menu"
+    currentScreen: "circle", // Initial screen is set to "circle"
   };
 
   handleMenuOptionSelect = (option) => {

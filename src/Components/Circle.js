@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import "./Circle.css";
-import OptionsButton from "./OptionsButton";
+import OptionsButton from "./NumberOfBreathButton";
 import BackButton from "./BackButton";
-import "./OptionsButton.css";
-import "./BackButton.css";
+import "./Circle.css";
 
 class Circle extends Component {
   state = {
@@ -68,8 +66,6 @@ class Circle extends Component {
           ></div>
           <div className="text">{this.state.text}</div>
           <OptionsButton onBreathsNumber={this.handleBreathsNumber} />
-          {/* <div className="stats">
-          {duration}, {breaths} */}
         </div>
         <BackButton onGoBack={this.handleGoBack} />
       </div>
