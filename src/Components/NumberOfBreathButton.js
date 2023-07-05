@@ -22,13 +22,12 @@ class NumberOfBreathButton extends Component {
     const { showOptions } = this.state;
     return (
       <div>
-        <div className="toggleButtonOptions">
+        <div className="toggleButtonOptionsIcon">
           <Button onClick={this.handleToggleOptions}>☰</Button>
         </div>
         {showOptions && (
-          <div className="buttonsContainer">
-            {/* <p className="buttonText">Choose your level (breaths per minute)</p> */}
-            <div className="durationButtons">
+          <div className="HowManyBreathsContainer">
+            <div className="HowManyBreathsButtons">
               <Button onClick={() => this.handleBreathsNumber(3)}>3</Button>
               <Button onClick={() => this.handleBreathsNumber(4)}>4</Button>
               <Button onClick={() => this.handleBreathsNumber(5)}>5</Button>

@@ -21,8 +21,14 @@ class TimerButton extends Component {
           <Button onClick={this.handleToggleOptions}>☰</Button>
         </div>
         {showOptions && (
-          <div>
-            <Button>YO</Button>
+          <div className="optionsContainer">
+            <Button>X</Button>
+            <Button>Free</Button>
+            <Button>1</Button>
+            <Button>2</Button>
+            <Button>3</Button>
+            <Button>4</Button>
+            <Button>5</Button>
           </div>
         )}
       </div>
