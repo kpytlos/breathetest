@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Circle from "./Components/Circle";
 import Menu from "./Components/Menu";
+import BackButton from "./Components/BackButton";
+import "./Components/BackButton.css";
 
 class App extends Component {
   state = {
@@ -17,14 +19,21 @@ class App extends Component {
     }
   };
 
+  handleGoBack = () => {
+    this.handleMenuOptionSelect("menu");
+  };
+
   render() {
     const { currentScreen } = this.state;
     return (
-      <div className="appContainer">
-        <h2 className="mainTitle">
+      <div className="MainAppContainer">
+        <div className="mainTitle">
           Enhancing your well-being through mindful breathing.
-        </h2>
-        <div className="App App-header">
+        </div>
+        <div className="backButtonContainer">
+          <BackButton onGoBack={this.handleGoBack} />
+        </div>
+        <div className="App-header">
           {currentScreen === "menu" ? (
             <Menu onMenuOptionSelect={this.handleMenuOptionSelect} />
           ) : currentScreen === "circle" ? (

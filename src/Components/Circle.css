@@ -4,12 +4,13 @@
   width: 100vw;
 }
 
-.circleBreaths {
+.circleAnimationAndBreathText {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
+
 .circle {
   background-color: #82d182;
   width: 18vh;

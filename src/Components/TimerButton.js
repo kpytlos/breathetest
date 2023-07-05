@@ -1,6 +1,6 @@
-import React, { Component, useSyncExternalStore } from "react";
+import React, { Component } from "react";
 import Button from "./Button";
-import "./NumberOfBreathButton.css";
+import "./TimerButton.css";
 
 class TimerButton extends Component {
   state = {
@@ -16,7 +16,7 @@ class TimerButton extends Component {
   render() {
     const { showOptions } = this.state;
     return (
-      <div>
+      <div className="timerContainer">
         <div>
           <Button onClick={this.handleToggleOptions}>☰</Button>
         </div>
