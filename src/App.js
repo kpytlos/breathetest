@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Circle from "./Components/Circle";
+import CircleAnimation from "./Components/CircleAnimation";
 import Menu from "./Components/Menu";
 import BackButton from "./Components/BackButton";
 import "./Components/BackButton.css";
@@ -37,7 +37,7 @@ class App extends Component {
           {currentScreen === "menu" ? (
             <Menu onMenuOptionSelect={this.handleMenuOptionSelect} />
           ) : currentScreen === "circle" ? (
-            <Circle onMenuOptionSelect={this.handleMenuOptionSelect} />
+            <CircleAnimation onMenuOptionSelect={this.handleMenuOptionSelect} />
           ) : (
             // Render the customize menu screen component here
             <div>Customize Menu</div>
