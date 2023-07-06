@@ -11,7 +11,7 @@ const Test = () => {
 
   const breathDuration = 60 / breaths;
 
-  //>>>>>>>> TO MANAGE WHEN THE TEXT IS CHANGING ALONG WITH THE CIRCLE
+  //>>>>>>>>> TO MANAGE WHEN THE TEXT IS CHANGING ALONG WITH THE CIRCLE
   useEffect(() => {
     const timer = setInterval(() => {
       setText((prevText) =>
@@ -24,7 +24,7 @@ const Test = () => {
     };
   }, breaths);
 
-  //>>>>>>>> TO MANAGE RESET OF PARAMETERS
+  //>>>>>>>>> TO MANAGE RESET OF PARAMETERS
   const handleBreathsNumber = (newBreaths) => {
     setBreaths(newBreaths);
     setResetAnimation(true);
