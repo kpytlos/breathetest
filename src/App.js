@@ -4,6 +4,7 @@ import CircleAnimation from "./Components/CircleAnimation";
 import Menu from "./Components/Menu";
 import BackButton from "./Components/BackButton";
 import "./Components/BackButton.css";
+import videoFile from "./Assets/video1.mp4";
 
 class App extends Component {
   state = {
@@ -43,6 +44,10 @@ class App extends Component {
             <div>Customize Menu</div>
           )}
         </div>
+        <video autoPlay muted loop id="background-video">
+          <source src={videoFile} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     );
   }
