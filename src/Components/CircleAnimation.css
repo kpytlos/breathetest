@@ -42,16 +42,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #375d3b;
+  color: transparent;
   font-size: clamp(20px, 5vw, 24px);
-}
-
-.backButtonContainer {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
 }
 
 .statsTimer {
