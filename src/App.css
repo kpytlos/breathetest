@@ -5,24 +5,6 @@
   background-color: transparent;
 }
 
-.mainTitle {
-  width: 100vw;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: #375d3b;
-  font-size: clamp(15px, 5vw, 30px);
-}
-
-.backButtonContainer {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .App-header {
   display: flex;
   flex-direction: column;
@@ -31,13 +13,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.statsTimer {
+.firstMessage {
   position: absolute;
-  bottom: 10px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #background-video {

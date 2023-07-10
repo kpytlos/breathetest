@@ -1,56 +1,41 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import CircleAnimation from "./Components/CircleAnimation";
-import Menu from "./Components/Menu";
-import BackButton from "./Components/BackButton";
-import "./Components/BackButton.css";
 import videoFile from "./Assets/video1.mp4";
 
-class App extends Component {
-  state = {
-    currentScreen: "circle", // Initial screen is set to "circle"
-  };
+const App = () => {
+  const [initialScreen, setInitialScreen] = useState("hey");
 
-  handleMenuOptionSelect = (option) => {
-    if (option === "circle") {
-      this.setState({ currentScreen: "circle" });
-    } else if (option === "menu") {
-      this.setState({ currentScreen: "menu" });
-      // Implement logic to switch to customize menu screen
-    }
-  };
+  useEffect(() => {
+    const displayScreen = setTimeout(() => {
+      setInitialScreen("justBreathe");
+    }, 3000);
 
-  handleGoBack = () => {
-    this.handleMenuOptionSelect("menu");
-  };
+    const displayScreen2 = setTimeout(() => {
+      setInitialScreen("circle");
+    }, 6000);
 
-  render() {
-    const { currentScreen } = this.state;
-    return (
-      <div className="MainAppContainer">
-        <div className="mainTitle">
-          Enhancing your well-being through mindful breathing.
-        </div>
-        <div className="backButtonContainer">
-          <BackButton onGoBack={this.handleGoBack} />
-        </div>
-        <div className="App-header">
-          {currentScreen === "menu" ? (
-            <Menu onMenuOptionSelect={this.handleMenuOptionSelect} />
-          ) : currentScreen === "circle" ? (
-            <CircleAnimation onMenuOptionSelect={this.handleMenuOptionSelect} />
-          ) : (
-            // Render the customize menu screen component here
-            <div>Customize Menu</div>
-          )}
-        </div>
-        <video autoPlay muted loop id="background-video">
-          <source src={videoFile} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    return () => {
+      clearTimeout(displayScreen);
+      clearTimeout(displayScreen2);
+    };
+  }, []);
+
+  return (
+    <div className="MainAppContainer">
+      <div className="App-header">
+        {initialScreen === "hey" && <p className="firstMessage">Hey.</p>}
+        {initialScreen === "justBreathe" && (
+          <p className="firstMessage">Just breathe...</p>
+        )}
+        {initialScreen === "circle" && <CircleAnimation />}
       </div>
-    );
-  }
-}
+      <video autoPlay muted loop id="background-video">
+        <source src={videoFile} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+};
 
 export default App;

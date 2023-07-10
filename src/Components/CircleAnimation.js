@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import NumberOfBreathButton from "./NumberOfBreathButton";
-import TimerButton from "./TimerButton";
+import ButtonNumberOfBreath from "./Buttons/ButtonNumberOfBreath";
+import ButtonHowMuchTime from "./Buttons/ButtonHowMuchTime";
 import StatsTimer from "./StatsTimer";
 import "./CircleAnimation.css";
+import ButtonMainMenu from "./Buttons/ButtonMainMenu";
+import "./Buttons/ButtonMainMenu.css";
 
 const Test = () => {
   const [text, setText] = useState("Breathe In");
@@ -38,6 +40,9 @@ const Test = () => {
 
   return (
     <div className="circleContainer">
+      <div className="backButtonContainer">
+        <ButtonMainMenu />
+      </div>
       <div className="circleAnimationAndBreathText">
         <div
           className={circleClassName}
@@ -45,8 +50,8 @@ const Test = () => {
         ></div>
         <div className="text">{text}</div>
       </div>
-      <NumberOfBreathButton onBreathsNumber={handleBreathsNumber} />
-      <TimerButton />
+      <ButtonNumberOfBreath onBreathsNumber={handleBreathsNumber} />
+      <ButtonHowMuchTime />
       <StatsTimer resetAnimation={resetAnimation} />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Button.css";
+import "./ButtonUniStyle.css";
 
-const Button = ({ onClick, children }) => {
+const ButtonUniStyle = ({ onClick, children }) => {
   return (
     <div>
       <button className="uniButton" onClick={onClick}>
@@ -11,4 +11,4 @@ const Button = ({ onClick, children }) => {
   );
 };
 
-export default Button;
+export default ButtonUniStyle;
