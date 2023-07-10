@@ -22,7 +22,7 @@ const Test = () => {
     return () => {
       clearInterval(timer);
     };
-  }, breaths);
+  }, [breaths]);
 
   //>>>>>>>>> TO MANAGE RESET OF PARAMETERS
   const handleBreathsNumber = (newBreaths) => {
