@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./StatsTimer.css";
+import "./Styles/StatsTimer.css";
 
 export default function StatsTimer({ resetAnimation }) {
   const [time, setTime] = useState(0);

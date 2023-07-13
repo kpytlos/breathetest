@@ -12,12 +12,13 @@
 }
 
 .circle {
-  background-color: #82d182;
+  background-color: linear-gradient(to right, transparent 50%, white 50%);
   width: 18vh;
   height: 18vh;
   border-radius: 50%;
+  border: 0.1vw solid;
   animation: circleAnimation infinite;
-  box-shadow: 0 0 20px rgba(130, 209, 130, 0.5);
+  box-shadow: 0 0 50px white;
 }
 
 @keyframes circleAnimation {
@@ -42,7 +43,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: transparent;
+  color: white;
   font-size: clamp(20px, 5vw, 24px);
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ButtonsTogether from "./ButtonsTogether";
 import StatsTimer from "./StatsTimer";
-import "./CircleAnimation.css";
+import "./Styles/CircleAnimation.css";
 
 const Test = () => {
   const [text, setText] = useState("Breathe In");
@@ -45,7 +45,7 @@ const Test = () => {
         <div className="text">{text}</div>
       </div>
       {/* <ButtonsTogether onBreathsNumber={handleBreathsNumber} /> */}
-      <StatsTimer resetAnimation={resetAnimation} />
+      {/* <StatsTimer resetAnimation={resetAnimation} /> */}
     </div>
   );
 };
