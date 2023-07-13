@@ -44,8 +44,8 @@ const Test = () => {
         ></div>
         <div className="text">{text}</div>
       </div>
-      {/* <ButtonsTogether onBreathsNumber={handleBreathsNumber} /> */}
-      {/* <StatsTimer resetAnimation={resetAnimation} /> */}
+      <ButtonsTogether onBreathsNumber={handleBreathsNumber} />
+      <StatsTimer resetAnimation={resetAnimation} />
     </div>
   );
 };
