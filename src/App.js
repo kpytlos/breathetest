@@ -9,11 +9,11 @@ const App = () => {
   useEffect(() => {
     const displayScreen = setTimeout(() => {
       setInitialScreen("justBreathe");
-    }, 5000);
+    }, 3000);
 
     const displayScreen2 = setTimeout(() => {
       setInitialScreen("circle");
-    }, 10000);
+    }, 6000);
 
     return () => {
       clearTimeout(displayScreen);
