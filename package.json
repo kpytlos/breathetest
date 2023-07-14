@@ -2,7 +2,7 @@
   "name": "breathetest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dev--beautiful-horse-d8bcf7.netlify.app/",
+  "homepage": "https://breathetest.netlify.app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
