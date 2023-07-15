@@ -2,25 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import CircleAnimation from "./Components/CircleAnimation";
 import videoFile from "./Assets/video1.mp4";
+import InitialScreenSettings from "./Components/InitialScreenSettings";
 
 const App = () => {
-  const [initialScreen, setInitialScreen] = useState("hey");
-
-  useEffect(() => {
-    const displayScreen = setTimeout(() => {
-      setInitialScreen("justBreathe");
-    }, 2500);
-
-    const displayScreen2 = setTimeout(() => {
-      setInitialScreen("circle");
-    }, 5000);
-
-    return () => {
-      clearTimeout(displayScreen);
-      clearTimeout(displayScreen2);
-    };
-  }, []);
-
+  const initialScreen = InitialScreenSettings();
   return (
     <div className="MainAppContainer">
       <div className="App-header">

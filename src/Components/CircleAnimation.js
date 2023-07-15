@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ButtonsTogether from "./ButtonsTogether";
 import StatsTimer from "./StatsTimer";
-import "./Styles/CircleAnimation.css";
+import circleAnimation from "./Styles/CircleAnimation.module.css";
 
 const Test = () => {
   const [text, setText] = useState("Breathe In");
@@ -33,16 +33,18 @@ const Test = () => {
     }, 0);
   };
 
-  const circleClassName = `circle ${resetAnimation ? "reset-animation" : ""}`;
+  const circleClassName = `${circleAnimation.circle} ${
+    resetAnimation ? circleAnimation["reset-animation"] : ""
+  }`;
 
   return (
-    <div className="circleContainer">
-      <div className="circleAnimationAndBreathText">
+    <div className={circleAnimation.circleContainer}>
+      <div className={circleAnimation.circleAnimationAndBreathText}>
         <div
           className={circleClassName}
           style={{ animationDuration: `${breathDuration}s` }}
         ></div>
-        <div className="text">{text}</div>
+        <div className={circleAnimation.text}>{text}</div>
       </div>
       <ButtonsTogether onBreathsNumber={handleBreathsNumber} />
       <StatsTimer resetAnimation={resetAnimation} />
